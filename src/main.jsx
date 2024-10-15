@@ -11,3 +11,7 @@ createRoot(document.getElementById("root")).render(
     </div>
   </StrictMode>
 );
+
+// home work
+// bistro boss section parallax effect add korba
+// menu section full complete korba
