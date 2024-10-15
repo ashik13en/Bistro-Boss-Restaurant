@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
-.cinzel {
-  font-family: "Cinzel", serif;
+@font-face {
+  font-family: "cinzel"; /*Can be any text*/
+  src: url("./assets/fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
 }

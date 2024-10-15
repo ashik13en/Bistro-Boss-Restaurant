@@ -48,7 +48,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <h1 className="font-bold lg:text-[28px] leading-[43.14px] cinzel">
+        <h1 className="font-bold lg:text-[26px] leading-[43.14px] font-cinzel">
           BISTRO BOSS
         </h1>
 
