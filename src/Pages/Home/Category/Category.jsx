@@ -16,7 +16,7 @@ import img5 from "../../../assets/home/slide5.jpg";
 
 const Category = () => {
   return (
-    <div className="p-4 md:p-0 md:pl-6">
+    <div className="">
       <CategoryTitle
         subtitle={"From 11:00am to 10:00pm"}
         title={"special menu"}
