@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import ChefService from "../ChefService/ChefService";
+import Menu from "../Menu/Menu";
 // import img1 from "../../../assets/menu/salad-bg.jpg";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       <div className="p-8">
         <Category />
         <ChefService />
+        <Menu />
       </div>
     </div>
   );
