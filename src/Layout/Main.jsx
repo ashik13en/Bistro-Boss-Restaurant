@@ -5,7 +5,9 @@ import Header from "../Pages/Header/Header";
 
 const Main = () => {
   const location = useLocation();
-  const noHeader = location.pathname.includes("/login");
+  const noHeader =
+    location.pathname.includes("/login") ||
+    location.pathname.includes("/signUp");
   return (
     <div>
       {noHeader || <Header />}

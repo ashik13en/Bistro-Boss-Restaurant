@@ -1,22 +1,21 @@
 import React from "react";
 import img1 from "../../assets/others/authentication.png";
 import img2 from "../../assets/others/authentication2.png";
-import { Link } from "react-router-dom";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div
       style={{ backgroundImage: `url(${img1})` }}
       className="bg-cover bg-center h-screen"
     >
-      <div className="flex flex-col w-full lg:flex-row items-center mx-auto h-full">
+      <div className="flex flex-col w-full lg:flex-row-reverse items-center mx-auto h-full">
         {/* image section */}
         <div className="lg:w-[50%]">
           <img src={img2} alt="" />
         </div>
         {/* form section */}
         <div className="lg:w-[50%]">
-          <h1 className="font-bold text-center">Login</h1>
+          <h1 className="font-bold text-center">SignUp</h1>
           <form className="flex flex-col items-center">
             <div className="">
               <label className="block text-gray-700 text-sm  font-bold mb-2">
@@ -61,14 +60,11 @@ const Login = () => {
               ></textarea>
               <br />
               <button className="w-[300px] font-bold text-white bg-[#D1A054B2] mb-4 p-4 rounded-[8px]">
-                Sign In
+                Create a account
               </button>
-              <h1 className="text-[#D1A054B2] text-center">
-                New here?{" "}
-                <Link to={"/signUp"} className="font-bold">
-                  Create a New Account
-                </Link>
-              </h1>
+              {/* <h1 className="text-[#D1A054B2] text-center">
+                New here? <a className="font-bold">Create a New Account</a>
+              </h1> */}
             </div>
           </form>
         </div>
@@ -77,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
