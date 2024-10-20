@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -26,7 +27,16 @@ const Header = () => {
             className="menu menu-sm text-black dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) => {
+                  return isActive
+                    ? "bg-red-700 text-white hover:bg-red-800"
+                    : "";
+                }}
+              >
+                Home
+              </NavLink>
             </li>
 
             <li>
@@ -44,12 +54,28 @@ const Header = () => {
             </li>
 
             <li>
-              <a>SIGN OUT</a>
+              <NavLink
+                to={"/login"}
+                className={({ isActive }) => {
+                  return isActive
+                    ? "bg-red-700 text-white hover:bg-red-800"
+                    : "";
+                }}
+              >
+                Login
+              </NavLink>
             </li>
           </ul>
         </div>
         <h1 className="font-bold lg:text-[26px] leading-[43.14px] font-cinzel">
-          BISTRO BOSS
+          <NavLink
+            to={"/"}
+            // className={({ isActive }) => {
+            //   return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+            // }}
+          >
+            BISTRO BOSS
+          </NavLink>
         </h1>
 
         {/* <a className="btn btn-ghost text-xl"> Restaurant</a> */}
@@ -57,7 +83,14 @@ const Header = () => {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 uppercase font-semibold">
           <li>
-            <a>Home</a>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) => {
+                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              }}
+            >
+              Home
+            </NavLink>
           </li>
 
           <li>
@@ -75,7 +108,14 @@ const Header = () => {
           </li>
 
           <li>
-            <a>SIGN OUT</a>
+            <NavLink
+              to={"/login"}
+              className={({ isActive }) => {
+                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              }}
+            >
+              Login
+            </NavLink>
           </li>
         </ul>
       </div>

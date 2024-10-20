@@ -1,14 +1,16 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Pages/Footer/Footer";
 import Header from "../Pages/Header/Header";
 
 const Main = () => {
+  const location = useLocation();
+  const noHeader = location.pathname.includes("/login");
   return (
     <div>
-      <Header />
+      {noHeader || <Header />}
       <Outlet />
-      <Footer />
+      {noHeader || <Footer />}
     </div>
   );
 };
