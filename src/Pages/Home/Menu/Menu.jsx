@@ -1,10 +1,10 @@
 import React from "react";
 import CategoryTitle from "../../../Components/CategoryTitle";
-import img1 from "../../../assets/menu/pizza-bg.jpg";
+// import img1 from "../../../assets/menu/pizza-bg.jpg";
 import menu from "../../../assets/menu.json";
 
 const Menu = () => {
-  const limitedMenu = menu.slice(8, 14);
+  const limitedMenu = menu.slice(0, 6);
   //   console.log(menu);
   console.log(limitedMenu);
 
