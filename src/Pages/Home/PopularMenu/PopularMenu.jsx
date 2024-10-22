@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CategoryTitle from "../../../Components/CategoryTitle";
 import MenuItem from "../../Shared/MenuItem/MenuItem";
+import useMenu from "../../../hooks/useMenu";
 
 const PopularMenu = () => {
-  const [menu, setMenu] = useState([]);
+  const [menu] = useMenu();
+  const popularItem = menu.filter((item) => item.category === "popular");
+  // const [menu, setMenu] = useState([]);
 
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const popularItem = data.filter((item) => item.category === "popular");
-        setMenu(popularItem);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("menu.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const popularItem = data.filter((item) => item.category === "popular");
+  //       setMenu(popularItem);
+  //     });
+  // }, []);
 
   // const limitedMenu = menu.slice(0, 6);
   // //   console.log(menu);
@@ -22,7 +25,7 @@ const PopularMenu = () => {
     <div>
       <CategoryTitle subtitle={"Check it out"} title={"FROM OUR MENU"} />
       <div className="grid lg:grid-cols-2 gap-4">
-        {menu.map((item) => (
+        {popularItem.map((item) => (
           <MenuItem
             key={item._id}
             img={item.image}

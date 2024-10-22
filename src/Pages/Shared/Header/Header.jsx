@@ -47,7 +47,16 @@ const Header = () => {
             </li>
 
             <li>
-              <a>Our Menu</a>
+              <NavLink
+                to={"/menu"}
+                className={({ isActive }) => {
+                  return isActive
+                    ? "bg-red-700 text-white hover:bg-red-800"
+                    : "";
+                }}
+              >
+                Our Menu
+              </NavLink>
             </li>
             <li>
               <a>Our Shop</a>
@@ -101,7 +110,14 @@ const Header = () => {
           </li>
 
           <li>
-            <a>Our Menu</a>
+            <NavLink
+              to={"/menu"}
+              className={({ isActive }) => {
+                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              }}
+            >
+              Our Menu
+            </NavLink>
           </li>
           <li>
             <a>Our Shop</a>
