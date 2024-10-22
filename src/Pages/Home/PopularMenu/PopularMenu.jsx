@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CategoryTitle from "../../../Components/CategoryTitle";
-// import { createLogger } from "vite";
-// import img1 from "../../../assets/menu/pizza-bg.jpg";
-// import menu from "../../../assets/menu.json";
+import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 const PopularMenu = () => {
   const [menu, setMenu] = useState([]);
@@ -12,7 +10,6 @@ const PopularMenu = () => {
       .then((res) => res.json())
       .then((data) => {
         const popularItem = data.filter((item) => item.category === "popular");
-        // console.log(popularItem);
         setMenu(popularItem);
       });
   }, []);
@@ -25,25 +22,14 @@ const PopularMenu = () => {
     <div>
       <CategoryTitle subtitle={"Check it out"} title={"FROM OUR MENU"} />
       <div className="grid lg:grid-cols-2 gap-4">
-        {menu.map((item, index) => (
-          <div key={index} className="flex gap-8 h-[104px] ">
-            {/* image section */}
-            <div className="w-[118px] h-[104px] flex-shrink-0">
-              <img
-                src={item.image}
-                alt=""
-                className="object-cover w-full h-full rounded-bl-[200px] rounded-br-[200px] rounded-tr-[200px] "
-              />
-            </div>
-            {/* food details section */}
-            <div className="">
-              <div className="flex justify-between  items-center mb-2 mt-1">
-                <h1>{item.name} ------------------</h1>
-                <p>${item.price}</p>
-              </div>
-              <h2>{item.recipe}</h2>
-            </div>
-          </div>
+        {menu.map((item) => (
+          <MenuItem
+            key={item._id}
+            img={item.image}
+            title={item.name}
+            price={item.price}
+            recipe={item.recipe}
+          />
         ))}
       </div>
       <div className="text-center my-4">
