@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CategoryTitle from "../../../Components/CategoryTitle";
+// import { createLogger } from "vite";
 // import img1 from "../../../assets/menu/pizza-bg.jpg";
-import menu from "../../../assets/menu.json";
+// import menu from "../../../assets/menu.json";
 
-const Menu = () => {
-  const limitedMenu = menu.slice(0, 6);
-  //   console.log(menu);
-  console.log(limitedMenu);
+const PopularMenu = () => {
+  const [menu, setMenu] = useState([]);
+
+  useEffect(() => {
+    fetch("menu.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const popularItem = data.filter((item) => item.category === "popular");
+        // console.log(popularItem);
+        setMenu(popularItem);
+      });
+  }, []);
+
+  // const limitedMenu = menu.slice(0, 6);
+  // //   console.log(menu);
+  // console.log(limitedMenu);
 
   return (
     <div>
       <CategoryTitle subtitle={"Check it out"} title={"FROM OUR MENU"} />
-
       <div className="grid lg:grid-cols-2 gap-4">
-        {limitedMenu.map((item, index) => (
+        {menu.map((item, index) => (
           <div key={index} className="flex gap-8 h-[104px] ">
             {/* image section */}
             <div className="w-[118px] h-[104px] flex-shrink-0">
@@ -29,11 +41,7 @@ const Menu = () => {
                 <h1>{item.name} ------------------</h1>
                 <p>${item.price}</p>
               </div>
-              <h2>
-                {item.recipe}
-                {/* Roasted duck breast (served pink) with gratin potato and <br />{" "}
-                a griottine cherry sauce */}
-              </h2>
+              <h2>{item.recipe}</h2>
             </div>
           </div>
         ))}
@@ -47,4 +55,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default PopularMenu;
