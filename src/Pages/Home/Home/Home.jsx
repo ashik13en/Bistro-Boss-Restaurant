@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import ChefService from "../ChefService/ChefService";
-import Menu from "../Menu/Menu";
+import Menu from "../PopularMenu/PopularMenu";
 import { Helmet } from "react-helmet-async";
 // import img1 from "../../../assets/menu/salad-bg.jpg";
 
