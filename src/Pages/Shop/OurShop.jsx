@@ -30,35 +30,35 @@ const OurShop = () => {
         </TabList>
 
         <TabPanel>
-          <div className="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="p-3 lg:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {salad.map((item) => (
               <ShopCard key={item._id} items={item} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="p-3 lg:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pizza.map((item) => (
               <ShopCard key={item._id} items={item} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="p-3 lg:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {soup.map((item) => (
               <ShopCard key={item._id} items={item} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="p-3 lg:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {dessert.map((item) => (
               <ShopCard key={item._id} items={item} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="p-3 lg:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {drinks.map((item) => (
               <ShopCard key={item._id} items={item} />
             ))}
