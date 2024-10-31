@@ -29,11 +29,11 @@ const Header = () => {
             <li>
               <NavLink
                 to={"/"}
-                className={({ isActive }) => {
-                  return isActive
-                    ? "bg-red-700 text-white hover:bg-red-800"
-                    : "";
-                }}
+                // className={({ isActive }) => {
+                //   return isActive
+                //     ? "bg-red-700 text-white hover:bg-red-800"
+                //     : "";
+                // }}
               >
                 Home
               </NavLink>
@@ -49,11 +49,11 @@ const Header = () => {
             <li>
               <NavLink
                 to={"/menu"}
-                className={({ isActive }) => {
-                  return isActive
-                    ? "bg-red-700 text-white hover:bg-red-800"
-                    : "";
-                }}
+                // className={({ isActive }) => {
+                //   return isActive
+                //     ? "bg-red-700 text-white hover:bg-red-800 hover:text-white"
+                //     : "text-white";
+                // }}
               >
                 Our Menu
               </NavLink>
@@ -61,11 +61,11 @@ const Header = () => {
             <li>
               <NavLink
                 to={"/shop"}
-                className={({ isActive }) => {
-                  return isActive
-                    ? "bg-red-700 text-white hover:bg-red-800"
-                    : "";
-                }}
+                // className={({ isActive }) => {
+                //   return isActive
+                //     ? "bg-red-700 text-white hover:bg-red-800"
+                //     : "text-white";
+                // }}
               >
                 Our Shop
               </NavLink>
@@ -74,11 +74,11 @@ const Header = () => {
             <li>
               <NavLink
                 to={"/login"}
-                className={({ isActive }) => {
-                  return isActive
-                    ? "bg-red-700 text-white hover:bg-red-800"
-                    : "";
-                }}
+                // className={({ isActive }) => {
+                //   return isActive
+                //     ? "bg-red-700 text-white hover:bg-red-800"
+                //     : "";
+                // }}
               >
                 Login
               </NavLink>
@@ -103,9 +103,9 @@ const Header = () => {
           <li>
             <NavLink
               to={"/"}
-              className={({ isActive }) => {
-                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
-              }}
+              // className={({ isActive }) => {
+              //   return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              // }}
             >
               Home
             </NavLink>
@@ -121,9 +121,9 @@ const Header = () => {
           <li>
             <NavLink
               to={"/menu"}
-              className={({ isActive }) => {
-                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
-              }}
+              // className={({ isActive }) => {
+              //   return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              // }}
             >
               Our Menu
             </NavLink>
@@ -131,9 +131,9 @@ const Header = () => {
           <li>
             <NavLink
               to={"/shop"}
-              className={({ isActive }) => {
-                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
-              }}
+              // className={({ isActive }) => {
+              //   return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              // }}
             >
               Our Shop
             </NavLink>
@@ -142,9 +142,9 @@ const Header = () => {
           <li>
             <NavLink
               to={"/login"}
-              className={({ isActive }) => {
-                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
-              }}
+              // className={({ isActive }) => {
+              //   return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              // }}
             >
               Login
             </NavLink>
