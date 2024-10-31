@@ -39,12 +39,12 @@ const Header = () => {
               </NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <a>CONTACT us</a>
             </li>
             <li>
               <a>DASHBOARD</a>
-            </li>
+            </li> */}
 
             <li>
               <NavLink
@@ -59,7 +59,16 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <a>Our Shop</a>
+              <NavLink
+                to={"/shop"}
+                className={({ isActive }) => {
+                  return isActive
+                    ? "bg-red-700 text-white hover:bg-red-800"
+                    : "";
+                }}
+              >
+                Our Shop
+              </NavLink>
             </li>
 
             <li>
@@ -102,12 +111,12 @@ const Header = () => {
             </NavLink>
           </li>
 
-          <li>
+          {/* <li>
             <a>CONTACT us</a>
           </li>
           <li>
             <a>DASHBOARD</a>
-          </li>
+          </li> */}
 
           <li>
             <NavLink
@@ -120,7 +129,14 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <a>Our Shop</a>
+            <NavLink
+              to={"/shop"}
+              className={({ isActive }) => {
+                return isActive ? "bg-red-700 text-white hover:bg-red-800" : "";
+              }}
+            >
+              Our Shop
+            </NavLink>
           </li>
 
           <li>
